@@ -1,0 +1,105 @@
+$primary-color: #0f172a;
+$secondary-color: #2563eb;
+$accent-color: #14b8a6;
+$glass-bg: rgba(255, 255, 255, 0.1);
+$border-radius: 12px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1e1e1e);
+  color: white;
+//   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.homepage {
+  width: 100%;
+//   max-width: 900px;
+  text-align: center;
+}
+
+// Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $glass-bg;
+  backdrop-filter: blur(15px);
+  padding: 15px 25px;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $accent-color;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-item {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: $secondary-color;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: white;
+      text-shadow: 0 0 5px $secondary-color;
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  background: $glass-bg;
+  padding: 40px;
+  border-radius: $border-radius;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #b3b3b3;
+  }
+
+  .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: white;
+    background: $secondary-color;
+    border-radius: $border-radius;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+
+    &:hover {
+      background: $accent-color;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px $accent-color;
+    }
+  }
+}
