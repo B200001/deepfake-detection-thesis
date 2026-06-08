@@ -1,57 +1,61 @@
-# Deepfake Detection using ResNeXt50 and LSTM
-
-This project is a Deepfake Detection system designed to identify manipulated video content using a combination of CNN and RNN-based architectures. The main objective of this project was to gain a deeper understanding of how deepfakes are created and how machine learning techniques can be used to detect them effectively.
-
-## 🚀 Project Overview
-
-Deepfakes pose a significant threat in the age of digital media, enabling realistic manipulations of audio-visual content. This project explores how to detect such manipulations using a powerful hybrid deep learning architecture that combines:
-
-- **ResNeXt50** for spatial feature extraction.
-- **LSTM** for capturing temporal relationships across video frames.
-
-## 🎯 Purpose
-
-The purpose of this project was to:
-- Understand how deepfakes work under the hood.
-- Build a reliable model capable of detecting deepfake videos.
-- Deploy the system using modern web technologies.
 
 ---
 
-## Huge Thanks to 
-Abhijit Yadav https://github.com/abhijithjadhav/Deepfake_detection_using_deep_learning/tree/master/Model%20Creation
+### 3. Deepfake Detection (Master’s Thesis)
 
-## 🧠 Technologies Used
+```markdown
+# 🕵️ Deepfake Detection — Master’s Thesis
 
-### 🔍 Backend
-- **PyTorch** – For deep learning model training and inference.
-- **Flask** – Lightweight backend API for model serving.
+**ResNeXt-50 + LSTM** hybrid model for detecting temporally manipulated deepfake videos. Achieved **88.4% test accuracy** on FaceForensics++ and DFDC datasets, outperforming pure CNN baselines on temporally manipulated clips.
 
-### 🎨 Frontend
-- **ReactJS (TypeScript)** – For building a responsive UI.
-- **Sass** – For styling components efficiently.
+Fully containerized and deployed with a real-time video analysis UI.
 
----
+## 🎯 Problem
+Existing deepfake detection models struggle with temporal inconsistencies in manipulated videos. Most approaches rely only on spatial (frame-level) features.
 
-## 📊 Dataset
+## ✅ Solution
+A hybrid architecture combining:
+- **ResNeXt-50** for spatial feature extraction
+- **LSTM** for modeling temporal dependencies across frames
+- End-to-end training and evaluation on large-scale deepfake datasets
 
-The model was trained and evaluated on three widely-used deepfake datasets:
-- **DFDC (Deepfake Detection Challenge)**
-- **Celeb-DF**
-- **FaceForensics++**
+## ✨ Key Features
 
----
+- Hybrid CNN + RNN architecture for spatio-temporal analysis
+- Strong performance on temporally manipulated content
+- Real-time inference via Flask API
+- Modern React + TypeScript frontend for video upload and analysis
+- Deployed on AWS EC2 with containerized setup
 
-## 🧪 Results
+## 🛠️ Tech Stack
 
-| Phase      | Accuracy |
-|------------|----------|
-| Training   | 98.75%   |
-| Testing    | 88.43%   |
+| Layer              | Technology                          |
+|--------------------|-------------------------------------|
+| **Model**          | ResNeXt-50 + LSTM (PyTorch)         |
+| **Datasets**       | FaceForensics++, DFDC               |
+| **Backend**        | Flask, Python                       |
+| **Frontend**       | React, TypeScript                   |
+| **Deployment**     | Docker, AWS EC2                     |
+| **Computer Vision**| OpenCV                              |
 
-These results show strong generalization performance with high training accuracy and a competitive test accuracy, indicating good robustness across datasets.
+## 📊 Results
 
----
+- **88.4% test accuracy** on combined FaceForensics++ and DFDC datasets
+- Outperformed pure CNN baselines on videos with temporal manipulation
+- Successfully deployed as a real-time video analysis service
 
 
+## 🚀 Getting Started
 
+```bash
+git clone https://github.com/B200001/deepfake-detection.git
+cd deepfake-detection
+
+# Backend
+cd backend
+pip install -r requirements.txt
+python app.py
+
+# Frontend
+cd frontend
+npm install && npm start
